@@ -1,0 +1,9 @@
+*
+!.gitignore
+!src**/**
+!contentScript.js
+!icon.png
+!manifest.json
+!popup.html
+!popup.js
+!README.md

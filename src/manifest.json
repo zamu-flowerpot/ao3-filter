@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "ao3-filter",
+    "description": "filter ao3 works based on regular expressions",
+    "version": "0.1",
+
+    "permissions": ["storage", "activeTab"],
+    "icons": {
+        "19": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "ao3-filter",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://archiveofourown.org/tags/*",
+                "https://archiveofourown.org/works*"
+            ],
+            "js": ["contentScript.js"],
+            "all_frames": false
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ao3-filter@localhost.local",
+            "strict_min_version": "53"
+        }
+    }
+}
